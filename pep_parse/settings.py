@@ -1,7 +1,5 @@
 from datetime import datetime as dt
 
-from pep_parse.constants import RESULTS_DIR
-
 
 BOT_NAME = "pep_parse"
 

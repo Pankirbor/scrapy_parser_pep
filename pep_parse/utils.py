@@ -1,6 +1,5 @@
 import re
 from typing import Tuple
-from pathlib import Path
 
 
 def get_pep_name_and_number(pep_discription: str) -> Tuple[str, str]:
