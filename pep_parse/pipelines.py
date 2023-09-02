@@ -1,7 +1,11 @@
 from datetime import datetime
 from collections import defaultdict
 
-from pep_parse.constants import BASE_DIR, RESULTS_DIR
+from pep_parse.constants import (
+    BASE_DIR,
+    RESULTS_DIR,
+    STATUS_FILE_DATE_FORMAT,
+)
 
 
 class PepParsePipeline:
@@ -13,7 +17,7 @@ class PepParsePipeline:
         return item
 
     def close_spider(self, spider):
-        now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        now = datetime.now().strftime(STATUS_FILE_DATE_FORMAT)
         result_dir = BASE_DIR / RESULTS_DIR
         result_dir.mkdir(exist_ok=True)
 

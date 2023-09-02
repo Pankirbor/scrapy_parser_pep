@@ -3,11 +3,11 @@ import scrapy
 from pep_parse.constants import (
     NAME_SPIDER,
     ALLOWED_DOMAINS,
-    START_URLS,
     XPATH_GET_STATUS,
     XPATH_GET_PEP_TITLE,
     XPATH_GET_ROWS_PEP_TABLE,
     CSS_GET_PEPS_LINKS,
+    START_URLS,
 )
 from pep_parse.items import PepParseItem
 from pep_parse.utils import get_pep_name_and_number
@@ -15,8 +15,8 @@ from pep_parse.utils import get_pep_name_and_number
 
 class PepSpider(scrapy.Spider):
     name = NAME_SPIDER
-    allowed_domains = ALLOWED_DOMAINS
-    start_urls = START_URLS
+    allowed_domains = [ALLOWED_DOMAINS]
+    start_urls = [START_URLS]
 
     def parse(self, response):
         rows_table = response.xpath(XPATH_GET_ROWS_PEP_TABLE).css("tr")
