@@ -1,9 +1,6 @@
 # Проект парсера PEP с использованием Scrapy
 
 ![Логотип проекта](logo.png)
-[![Python](https://img.shields.io/badge/-Python-464646?style=flat&logo=Python&logoColor=ffffff&color=043A6B)](https://www.python.org/)
-[![Scrapy ](https://img.shields.io/badge/-Scrapy-464646?style=flat&logo=Scrapy&logoColor=ffffff&color=043A6B)](https://github.com/scrapy/scrapy)
-[![Coverage](./htmlcov/index.html)](./htmlcov/index.html)
 
 Этот проект представляет собой парсер `PEP (Python Enhancement Proposals)` с использованием фреймворка `Scrapy`. Основной задачей парсера является сохранение всех названий существующих `PEP` в файле и подсчет документов в соответстии статусу.
 
