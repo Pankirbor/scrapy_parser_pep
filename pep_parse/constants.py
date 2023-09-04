@@ -2,7 +2,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent
 ALLOWED_DOMAINS = ["peps.python.org"]
-START_URLS = [f"https://{ALLOWED_DOMAINS[0]}/"]
+START_URLS = [f"https://{domain}/" for domain in ALLOWED_DOMAINS]
 NAME_SPIDER = "pep"
 RESULTS_DIR = "results"
 
